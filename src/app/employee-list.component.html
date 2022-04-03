@@ -1,0 +1,29 @@
+
+<div class="container-fluild">
+     <div class="container">
+         <h1>Crud operation with angular and spring boot</h1>
+    </div>
+    
+    <table class="table table-hover">
+        <thead>
+            <tr class="table-primary">
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Email</th>
+                <th scope="col">Update</th> 
+                <th scope="col">Delete</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empl of employees">
+                <td>{{empl.firstname}}</td>
+                <td>{{empl.lastname}}</td>
+                <td>{{empl.email}}</td>
+                <td><button class="btn btn-info" (click)="update(empl.id)">Update</button></td>
+                <td><button class="btn btn-danger" (click)="del(empl.id)">Delete</button></td>
+            </tr>
+         
+</tbody>
+  </table> 
+</div>
